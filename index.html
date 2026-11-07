@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lưu Ảnh Studio | Nhiếp ảnh cưới, chân dung và sự kiện</title>
+  <meta name="description" content="Nhiếp ảnh cưới, chân dung và sự kiện tại Việt Nam. Xem tác phẩm, bảng giá và đặt lịch chụp.">
+  <meta property="og:title" content="Lưu Ảnh Studio">
+  <meta property="og:description" content="Nhiếp ảnh cưới, chân dung và sự kiện tại Việt Nam.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231c1a17'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23f2ede4' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%23d9623e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#tac-pham">Bỏ qua, đến phần tác phẩm</a>
+
+  <header class="site-header" id="header">
+    <a class="wordmark" href="#top" data-bind="name">Lưu Ảnh Studio</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">
+      <span class="menu-btn__label">Menu</span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Điều hướng chính">
+      <a href="#tac-pham">Tác phẩm</a>
+      <a href="#gioi-thieu">Giới thiệu</a>
+      <a href="#dich-vu">Dịch vụ</a>
+      <a href="#cam-nhan">Cảm nhận</a>
+      <a href="#lien-he" class="nav__cta">Đặt lịch</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Giới thiệu">
+      <div class="hero__slides" id="heroSlides"></div>
+      <div class="hero__body">
+        <p class="hero__kicker" data-bind="tagline">Nhiếp ảnh cưới, chân dung và sự kiện</p>
+        <h1>Có những khoảnh khắc chỉ xảy ra một lần.</h1>
+        <div class="hero__actions">
+          <a class="btn btn--light" href="#tac-pham">Xem tác phẩm</a>
+          <a class="btn btn--ghost" href="#lien-he">Đặt lịch chụp</a>
+        </div>
+      </div>
+      <p class="hero__frame" id="heroCaption" aria-live="off"></p>
+    </section>
+
+    <section class="section works" id="tac-pham">
+      <div class="section__head">
+        <p class="eyebrow">Tác phẩm</p>
+        <h2>Những cuộn phim gần đây</h2>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Lọc ảnh theo thể loại"></div>
+      <div class="gallery" id="gallery"></div>
+    </section>
+
+    <section class="section about" id="gioi-thieu">
+      <figure class="about__photo">
+        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=75" width="4" height="5" loading="lazy" alt="Máy ảnh và ống kính đặt trên mặt bàn tối màu">
+      </figure>
+      <div class="about__text">
+        <p class="eyebrow">Giới thiệu</p>
+        <h2>Tôi chụp chuyện đang diễn ra, không dựng lại chúng.</h2>
+        <p>Tấm ảnh được giữ lại lâu nhất thường không phải tấm tạo dáng đẹp nhất, mà là tấm có tiếng cười thật, cái nắm tay vội, ánh mắt không ai kịp để ý. Vì vậy phần lớn thời gian tôi đứng lùi lại, quan sát và chờ.</p>
+        <p>Trước mỗi buổi chụp, chúng ta sẽ ngồi nói chuyện để tôi hiểu bạn thích gì và ngại gì. Đến ngày chụp, bạn chỉ cần sống đúng khoảnh khắc đó. Phần còn lại để tôi lo.</p>
+        <dl class="stats" id="stats"></dl>
+      </div>
+    </section>
+
+    <section class="section services" id="dich-vu">
+      <div class="section__head">
+        <p class="eyebrow">Dịch vụ &amp; bảng giá</p>
+        <h2>Chọn gói phù hợp, phần còn lại cùng nhau tính</h2>
+      </div>
+      <div class="price-list" id="priceList"></div>
+      <p class="note">Giá đã gồm chỉnh màu và lưu trữ ảnh online 12 tháng. Chụp ngoài tỉnh cộng thêm chi phí đi lại.</p>
+    </section>
+
+    <section class="section process" aria-labelledby="process-title">
+      <div class="section__head">
+        <p class="eyebrow">Quy trình</p>
+        <h2 id="process-title">Bốn bước, không có gì phức tạp</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Trò chuyện</h3><p>Bạn kể về dịp chụp, tôi tư vấn gói và địa điểm phù hợp.</p></li>
+        <li><h3>Giữ lịch</h3><p>Đặt cọc 30% để giữ ngày, sau đó lên kịch bản chi tiết.</p></li>
+        <li><h3>Ngày chụp</h3><p>Đến đúng giờ, chụp đúng kế hoạch và luôn có máy dự phòng.</p></li>
+        <li><h3>Nhận ảnh</h3><p>Ảnh xem trước sau 3 ngày, trọn bộ trong 21 ngày.</p></li>
+      </ol>
+    </section>
+
+    <section class="quotes" id="cam-nhan">
+      <div class="quotes__inner">
+        <p class="eyebrow">Cảm nhận</p>
+        <div class="quotes__list" id="quotes"></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="lien-he">
+      <div class="contact__info">
+        <p class="eyebrow">Liên hệ</p>
+        <h2>Kể tôi nghe về ngày của bạn.</h2>
+        <p>Tôi trả lời mọi tin nhắn trong vòng 24 giờ. Lịch cuối tuần thường kín trước vài tháng, nên hãy nhắn sớm nếu bạn đã có ngày.</p>
+        <ul class="contact__list" id="contactList"></ul>
+      </div>
+      <form class="form" id="contactForm">
+        <div class="field">
+          <label for="f-name">Họ và tên</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-contact">Số điện thoại hoặc email</label>
+          <input id="f-contact" name="contact" type="text" autocomplete="tel" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-service">Dịch vụ</label>
+            <select id="f-service" name="service"></select>
+          </div>
+          <div class="field">
+            <label for="f-date">Ngày dự kiến</label>
+            <input id="f-date" name="date" type="date">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-message">Bạn muốn kể gì thêm?</label>
+          <textarea id="f-message" name="message" rows="4"></textarea>
+        </div>
+        <button class="btn btn--dark" type="submit">Soạn email gửi đi</button>
+        <p class="form__status" id="formStatus" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> <span data-bind="name">Lưu Ảnh Studio</span></p>
+    <p id="credit" hidden>Ảnh minh hoạ từ <a href="https://unsplash.com" rel="noopener">Unsplash</a></p>
+    <a href="#top">Lên đầu trang ↑</a>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Xem ảnh lớn">
+    <div class="lightbox__bar">
+      <p class="lightbox__count" id="lbCount"></p>
+      <button class="lightbox__close" id="lbClose" type="button">Đóng ✕</button>
+    </div>
+    <div class="lightbox__stage" id="lbStage">
+      <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Ảnh trước">←</button>
+      <img id="lbImg" alt="">
+      <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Ảnh sau">→</button>
+    </div>
+    <p class="lightbox__caption" id="lbCaption"></p>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
